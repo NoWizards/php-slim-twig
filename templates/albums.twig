@@ -1,0 +1,15 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Albums{% endblock %}
+
+{% block content %}
+    <h1>Album List</h1>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        {% for album in albums %}
+            <div style="border: 1px solid #ccc; padding: 1rem; border-radius: 8px; width: 200px;">
+                <h3>{{ album.title }}</h3>
+                <p><em>{{ album.artist }}</em></p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

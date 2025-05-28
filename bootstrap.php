@@ -30,4 +30,6 @@ $app->add(TwigMiddleware::createFromContainer($app));
 // Register routes
 $app->get('/', [\App\Controller\HomeController::class, 'index']);
 
+$app->get('/albums', [\App\Controller\AlbumsController::class, 'index']);
+
 return $app;
